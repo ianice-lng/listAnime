@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #0d0d0d, #292929); /* Darker gradient background */
+    color: #f0f0f0; /* Light grey text color */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container for Anime Details */
+.anime-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #1f1f1f; /* Dark card background */
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    text-align: center;
+}
+
+
+/* Anime Title */
+.anime-detail h1 {
+    font-size: 32px;
+    color: #ff8566; /* Soft coral color for titles */
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Anime Image */
+.anime-detail img {
+    width: 60%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    transition: box-shadow 0.3s ease;
+}
+
+.anime-detail img:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glow effect on hover */
+}
+
+/* Anime Synopsis */
+.anime-detail p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d4d4d4; /* Light grey for synopsis */
+    margin-bottom: 35px;
+}
+
+/* Episode Card */
+.ep {
+    position: relative;
+    width: 250px; /* Fixed width for episode card */
+    height: 140px; /* Fixed height for episode card */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2c2c2c; /* Dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.ep:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Episode Image */
+.ep img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Title Overlay */
+.episode-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Bottom Info Section */
+.episode-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #ffffff;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Back Button */
+.back-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.back-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    border-left: 3px solid #ff8566; /* Color of the arrow */
+    border-bottom: 3px solid #ff8566;
+    transform: translate(-50%, -50%) rotate(45deg); /* Creates the arrow shape */
+}
+
+.back-button:hover::before {
+    border-left: 3px solid #ff5733;
+    border-bottom: 3px solid #ff5733;
+}
+
+.back-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2); /* Background circle */
+    z-index: -1; /* Place behind the arrow */
+    transition: background-color 0.3s;
+}
+
+.back-button:hover::after {
+    background-color: rgba(0, 0, 0, 0.3); /* Darken on hover */
+}
+
+/* Pagination Container */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Page Buttons */
+.page-btn {
+    background-color: #ff6f61; /* Primary button color */
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-btn:hover {
+    background-color: #ff4c4c; /* Darker on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+.page-btn:active {
+    transform: scale(0.95); /* Slightly smaller when clicked */
+}
+
+/* First and Last Page Buttons */
+.first-page::before,
+.last-page::before {
+    font-size: 16px;
+}
+
+/* Input Field for Page Number */
+.page-number-input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.page-number-input:focus {
+    border-color: #ff4c4c;
+}
+
+/* Placeholder Text */
+.page-number-input::placeholder {
+    color: #000000; /* Light grey placeholder */
+}
