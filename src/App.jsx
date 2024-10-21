@@ -10,7 +10,6 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/random" element={<AnimeRandom />} /> */}
         <Route path="/anime/:id" element={<AnimeDetail />} />
         <Route path="/" element={<AnimeList />} />
       </Routes>

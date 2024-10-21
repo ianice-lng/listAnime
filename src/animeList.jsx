@@ -27,7 +27,7 @@ function AnimeList() {
         const result = await response.json();
         setAnimeList(result.data || []);
       } catch (error) {
-        console.error("Error fetching anime data:", error);
+        console.error("Error fetching anime data: ", error);
         setAnimeList(["error"]);
       }
     };

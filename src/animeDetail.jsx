@@ -84,7 +84,7 @@ function AnimeDetail() {
     return (
         <>
         <button className="back-button" onClick={() => window.history.back()}>Retour</button>
-        <div className="anime-detail">
+        <div className="anime-detail ">
             
             {anime ? (
                 <>
